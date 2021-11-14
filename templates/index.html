@@ -45,24 +45,22 @@
 
       
 
-    <form action="">
-        <div class = "jumbotron">
+    <form action="" method="POST"  class = "form mx-auto col-lg-6">
+      {%csrf_token%}
+        <div class = "jumbotron ">
+
             <ul class = "list-group">
+                {% comment %} <li class = "list-group-item mx-auto">
+                  <label class="form-check-label" for="phone">Phone Number </label> 
+                  <input type="tel" name = 'ph_no' required>
+                </li> {% endcomment %}
                 <p class = "font-weight-bold"> Starters</p>
                 <li class = "list-group-item">
-                    <img src="{%static 'lollypop.jpg'%}" alt="Chicken Lollypop" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
-                    <p class = "d-md-inline-block">Chicken Lollypop (8 piece)</p>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Price 250</label>
-                      </div>
-                </li>
 
-                <li class = "list-group-item">
                     <img src="{%static 'chicken65.jpg'%}" alt="Chicken 65" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Chicken 65 (8 piece)</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'chicken_65' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 220</label>
                       </div>
                 </li>
@@ -71,7 +69,7 @@
                     <img src="{%static 'paneer_pakora.jpg'%}" alt="paneer_pakora" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em; height : 15rem;">
                     <p class = "d-md-inline-block">Paneer Pakora</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'paneer_pakora' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 200</label>
                       </div>
                 </li>
@@ -85,7 +83,7 @@
                     <img src="{%static 'biryani.jpg'%}" alt="Biryani" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Biryani</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  value="True" name = "biryani" value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 250</label>
                       </div>
                 </li>
@@ -94,7 +92,7 @@
                     <img src="{%static 'chicken_hundi.jpg'%}" alt="Chicken Hundi" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Chicken Hundi(12 piece)</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'chicken_hundi' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 380</label>
                       </div>
                 </li>
@@ -103,7 +101,7 @@
                     <img src="{%static 'jeera_rice.jpg'%}" alt="Jeera Rice" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Jeera Rice</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'jeera_rice' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 130</label>
                       </div>
                 </li>
@@ -112,7 +110,7 @@
                     <img src="{%static 'mutton_kosha.jpg'%}" alt="Mutton Kosha" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Mutton Kosha (10 piece)</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'mutton_kosha' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 450</label>
                       </div>
                 </li>
@@ -121,7 +119,7 @@
                     <img src="{%static 'thali.jpg'%}" alt="Special Rajasthani Thali" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Special Rajasthani Thali</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'special_rajasthani_thali' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 650</label>
                       </div>
                 </li>
@@ -130,7 +128,7 @@
                     <img src="{%static 'ramen.jpg'%}" alt="Ramen" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Ramen</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'ramen' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 200</label>
                       </div>
                 </li>
@@ -143,7 +141,7 @@
                     <img src="{%static 'rosogolla.jpg'%}" alt="Rosogolla" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Rosogolla (4 piece)</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'rosogolla' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 60</label>
                       </div>
                 </li>
@@ -152,7 +150,7 @@
                     <img src="{%static 'keshar_lassi.jpg'%}" alt="Keshar Pista Lassi" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Keshar Pista Lassi</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'keshar_lassi' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 60</label>
                       </div>
                 </li>
@@ -161,7 +159,7 @@
                     <img src="{%static 'butter_scotch.jpg'%}" alt="Butter Scotch Icecream" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Butter Scotch Icecream</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'butter_scotch' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 60</label>
                       </div>
                 </li>
@@ -170,7 +168,7 @@
                     <img src="{%static 'rainbow_mousse.jpg'%}" alt="Rainbow Mousse" class = "d-md-inline-block" style = "width : 15rem; margin-right : 1em;">
                     <p class = "d-md-inline-block">Rainbow Mousse</p>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input"  name = 'rainbow_mousse' value = 'True'>
                         <label class="form-check-label" for="exampleCheck1">Price 60</label>
                       </div>
                 </li>
@@ -182,6 +180,8 @@
       </div>
       
     </form>
+
+
 
     
 </body>

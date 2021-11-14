@@ -1,7 +1,10 @@
 from django.contrib import admin
-from . models import Item, User
+from . import models
 
 # Register your models here.
 
-admin.site.register(Item)
-admin.site.register(User)
+admin.site.register(models.Item)
+admin.site.register(models.New_user)
+admin.site.register(models.Order)
+
+

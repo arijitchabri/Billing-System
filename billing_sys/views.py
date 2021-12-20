@@ -82,7 +82,7 @@ def user_details(request):
                         'data' : ordered_item_data,
                         'total' : total
                     }
-                messages.success(request, f'User Created')
+                #messages.success(request, f'User Created')
                 return render(request, ('bill.html'), context = context)
             else:
                 return render(request, 'user_details.html')
